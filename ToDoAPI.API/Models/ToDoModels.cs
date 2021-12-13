@@ -7,10 +7,13 @@ namespace ToDoAPI.API.Models
 {
     public class ToDoViewModel
     {
-        public int CategoryId { get; set; }
         public int Todoid { get; set; }
-        public string Action { get; set; }
-        public bool Done { get; set; }
+        public int CategoryId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Priority { get; set; }
+
+        
 
         public virtual CategoryViewModel Category { get; set; }
     }
@@ -18,9 +21,6 @@ namespace ToDoAPI.API.Models
     public class CategoryViewModel
     {
         public int CategoryId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Priority { get; set; }
-
+        public string CategoryName { get; set; }
     }
 }
